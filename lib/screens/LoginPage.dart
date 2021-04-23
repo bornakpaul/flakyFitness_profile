@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:profile_flutter_app/painters/background_painter.dart';
 import 'package:profile_flutter_app/screens/Profile%20Page.dart';
+import 'package:profile_flutter_app/screens/phoneLoginPage.dart';
 
 import 'RegisterPage.dart';
 
@@ -149,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
                           print("error");
                         }
                       },
-                      child:Text("REGISTER",style: TextStyle(fontSize: 20,color: Colors.white),),
+                      child:Text("LOGIN",style: TextStyle(fontSize: 20,color: Colors.white),),
                     ),
                   ),
                   SizedBox(height: 20.0,),
@@ -176,6 +177,21 @@ class _LoginPageState extends State<LoginPage> {
                         )
                       ],
                     ),
+                  ),
+                  SizedBox(height: 40.0,),
+                  Container(
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.deepPurpleAccent
+                    ),
+                    child: FlatButton(
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> phoneLoginPage()));
+                    },
+                      child: Text("OTP LOGIN",style: TextStyle(fontSize: 20,color: Colors.white),),
+                    )
                   ),
                 ],
               ),
